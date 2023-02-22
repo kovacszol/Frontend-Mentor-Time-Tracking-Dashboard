@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-size: 3.2rem;
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+#main {
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .container {
+    display: grid;
+    justify-content: center;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    grid-template-areas:
+        'personal work play study'
+        'personal exercise social selfCare';
+}
+
+.imgBox img {
+    height: 60px;
+    padding-right: 20px;
+    top: 50%;
+    transform: translateY(-10%);
+    right: -30px;
+}
+
+.imgBox {
+    height: 70px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.personal {
+    grid-area: personal;
+    width: 240px;
+}
+
+.work {
+    grid-area: work;
+    width: 240px;
+}
+
+.play {
+    grid-area: play;
+    width: 240px;
+}
+
+.study {
+    grid-area: study;
+    width: 240px;
+}
+
+.exercise {
+    grid-area: exercise;
+    width: 240px;
+}
+
+.social {
+    grid-area: social;
+    width: 240px;
+}
+
+.selfCare {
+    grid-area: selfCare;
+    width: 240px;
+}
+
+.work .imgBox {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play .imgBox {
+    background-color: hsl(195, 74%, 62%)
+}
+
+.study .imgBox {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise .imgBox {
+    background-color: hsl(145, 58%, 55%);
+
+}
+
+.social .imgBox {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.selfCare .imgBox {
+    background-color: hsl(43, 84%, 65%)
+}
+
+.workBody,
+.studyBody,
+.exerciseBody,
+.playBody,
+.selfCareBody,
+.socialBody {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    margin-top: -30px;
+    position: relative;
+    height: 200px;
+    padding: 20px;
+}
+
+.personalBody {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    height: 35%;
+    padding: 20px;
+}
+
+.personalHead {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 10px;
+    height: 65%;
+    padding: 25px;
+}
+
+.personalHead img {
+    width: 60px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.filter {
+    display: block;
+    margin-bottom: 20px;
+    color: hsl(235, 45%, 61%);
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    color: white;
+}
+
+.last,
+.report {
+    color: hsl(236, 100%, 87%)
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 0.8rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #main {
+        height: auto;
+        padding: 20px;
+    }
+
+    #main .container {
+        grid-template-areas:
+            'personal'
+            'work'
+            'play'
+            'study'
+            'exercise'
+            'social'
+            'selfCare';
+    }
+
+    .personal,
+    .work,
+    .play,
+    .study,
+    .exercise,
+    .social,
+    .selfCare {
+        width: 100%;
+    }
+}
